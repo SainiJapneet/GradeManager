@@ -1,6 +1,7 @@
 package com.example.grademanagement
 
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -12,9 +13,18 @@ import android.widget.ImageView
 class SplashScreen : AppCompatActivity() {
 
     lateinit var splashImg: ImageView
+
+    //sharedPreferences
+    lateinit var sharedPreferences: SharedPreferences
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
+
+        sharedPreferences = this.getSharedPreferences("Shared_Prefs", MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        var cred_bool = sharedPreferences.getBoolean("Cred_Pref",false)
+
 
         //to shift to full screen
         window.setFlags(
@@ -27,9 +37,13 @@ class SplashScreen : AppCompatActivity() {
         splashImg.startAnimation(animation)
 
     Handler(Looper.getMainLooper()).postDelayed({
-
-        var intent = Intent(this, OnBoarding1::class.java)
-        startActivity(intent)
+        if(cred_bool){
+            var intent = Intent(this, Grademanagement::class.java)
+            startActivity(intent)
+        }else{
+            var intent = Intent(this, OnBoarding1::class.java)
+            startActivity(intent)
+        }
         finish()
     },3000)
     }
