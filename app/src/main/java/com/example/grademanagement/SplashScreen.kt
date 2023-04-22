@@ -5,11 +5,27 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.view.WindowManager
+import android.view.animation.AnimationUtils
+import android.widget.ImageView
 
 class SplashScreen : AppCompatActivity() {
+
+    lateinit var splashImg: ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
+
+        //to shift to full screen
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
+        )
+
+        splashImg = findViewById(R.id.splashImg)
+        val animation = AnimationUtils.loadAnimation(this,R.anim.animation_splash)
+        splashImg.startAnimation(animation)
+
     Handler(Looper.getMainLooper()).postDelayed({
 
         var intent = Intent(this, OnBoarding1::class.java)
