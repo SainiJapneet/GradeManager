@@ -22,6 +22,13 @@ class Grademanagement : AppCompatActivity() {
 
 
 
+        var btnSyllabus = findViewById<Button>(R.id.btnResult_4)
+        btnSyllabus.setOnClickListener {
+            var intent= Intent(this, SyllabusActivity::class.java)
+            startActivity(intent)
+        }
+
+
 
         var dateselected = findViewById<ImageButton>(R.id.calenderbut)
         dateselected.setOnClickListener(){
@@ -46,7 +53,7 @@ class Grademanagement : AppCompatActivity() {
             datePickerDialog.show()
         }
 
-        val  result = findViewById<Button>(R.id.resultbut)
+        val  result = findViewById<Button>(R.id.btnResult_2)
         result.setOnClickListener(){
             val intentresult =Intent(this, GradeManagement_Result1::class.java)
             startActivity(intentresult)

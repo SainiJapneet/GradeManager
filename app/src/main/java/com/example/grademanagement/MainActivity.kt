@@ -1,6 +1,7 @@
 package com.example.grademanagement
 
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
@@ -15,6 +16,9 @@ class MainActivity : AppCompatActivity() {
     lateinit var pass: EditText
     lateinit var btn: MaterialButton
     lateinit var forget: TextView
+
+    lateinit var sharedPreferences: SharedPreferences
+
     private lateinit var register: TextView
     private val minpasslength = 8
     private lateinit var firebaseAuth: FirebaseAuth
@@ -32,6 +36,9 @@ class MainActivity : AppCompatActivity() {
         forget = findViewById(R.id.forget)
         register = findViewById(R.id.register)
 
+        sharedPreferences = this.getSharedPreferences("Shared_Prefs", MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+
         register.setOnClickListener {
             val intent = Intent(this, Register::class.java)
             startActivity(intent)
@@ -42,6 +49,9 @@ class MainActivity : AppCompatActivity() {
                 firebaseAuth.signInWithEmailAndPassword(email.text.toString(), pass.text.toString())
                     .addOnCompleteListener {
                         if (it.isSuccessful) {
+                            editor.putString("Cred_ID",email.text.toString())
+                            editor.putBoolean("Cred_Pref",true)
+                            editor.commit()
                             val intent = Intent(this, Grademanagement::class.java)
                             startActivity(intent)
                         } else {
