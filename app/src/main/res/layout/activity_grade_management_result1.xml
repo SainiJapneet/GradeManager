@@ -140,7 +140,7 @@
                                 android:id="@+id/txtResult.TGPA_1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="7.80 TGPA"
+                                android:text="7.80"
                                 android:textColor="#730A1F"
                                 android:textSize="15dp"
                                 android:textStyle="bold"/>
@@ -217,7 +217,7 @@
                                 android:id="@+id/txtResult.TGPA_2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="7.80 TGPA"
+                                android:text="7.80"
                                 android:textColor="#730A1F"
                                 android:textSize="15dp"
                                 android:textStyle="bold"/>
@@ -283,7 +283,7 @@
                                 android:id="@+id/txtResult.TGPA_3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="7.80 TGPA"
+                                android:text="7.80"
                                 android:textColor="#730A1F"
                                 android:textSize="15dp"
                                 android:textStyle="bold"/>
@@ -349,7 +349,7 @@
                                 android:id="@+id/txtResult.TGPA_4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="7.80 TGPA"
+                                android:text="7.80"
                                 android:textColor="#730A1F"
                                 android:textSize="15dp"
                                 android:textStyle="bold"/>
@@ -415,7 +415,7 @@
                                 android:id="@+id/txtResult.TGPA_5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="7.80 TGPA"
+                                android:text="7.80"
                                 android:textColor="#730A1F"
                                 android:textSize="15dp"
                                 android:textStyle="bold"/>
