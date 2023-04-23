@@ -326,7 +326,7 @@
                                 android:layout_height="30dp"
                                 android:ems="5"
                                 android:padding="10dp"
-                                android:id="@+id/coursebut"
+                                android:id="@+id/btnResult_1"
                                 android:text="View"
                                 android:backgroundTint="@color/teal_200"
                                 />
@@ -377,7 +377,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="30dp"
                                 android:ems="5"
-                                android:id="@+id/resultbut"
+                                android:id="@+id/btnResult_2"
                                 android:text="View"
                                 android:backgroundTint="@color/teal_200"
                                 />
@@ -425,7 +425,7 @@
                                 android:layout_height="30dp"
                                 android:ems="5"
                                 android:text="View"
-                                android:id="@+id/timetablebut"
+                                android:id="@+id/btnResult_3"
                                 android:backgroundTint="@color/teal_200"
                                 />
 
@@ -470,7 +470,7 @@
                                 android:textStyle="bold" />
 
                             <Button
-                                android:id="@+id/btnSyllabus"
+                                android:id="@+id/btnResult_4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="30dp"
                                 android:backgroundTint="@color/teal_200"
@@ -519,7 +519,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="30dp"
                                 android:ems="5"
-                                android:id="@+id/exambut"
+                                android:id="@+id/btnResult_5"
                                 android:text="View"
                                 android:backgroundTint="@color/teal_200"
                                 />

@@ -66,6 +66,7 @@
                     />
 
                 <TextView
+                    android:id="@+id/txtCGPA"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="125dp"
@@ -106,7 +107,7 @@
 
                         <ImageView
                             android:layout_width="50dp"
-                            android:src="@drawable/web_d"
+                            android:src="@drawable/android"
                             android:layout_height="50dp"/>
 
                         <LinearLayout
@@ -116,10 +117,11 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/txtResult.Course_1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
-                                android:text="INT222"
+                                android:text="CSE225"
                                 android:textColor="#000"
                                 android:textSize="25dp"
                                 android:textStyle="bold" />
@@ -135,6 +137,7 @@
                                 android:progressDrawable="@drawable/circularprogressbar2"
                                 android:secondaryProgress="100" />
                             <TextView
+                                android:id="@+id/txtResult.TGPA_1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="7.80 TGPA"
@@ -144,10 +147,10 @@
 
 
                             <Button
+                                android:id="@+id/btnResult_1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="30dp"
                                 android:ems="5"
-                                android:id="@+id/coursebut"
                                 android:text="View"
                                 android:backgroundTint="@color/teal_200"
                                 />
@@ -181,7 +184,7 @@
 
                         <ImageView
                             android:layout_width="50dp"
-                            android:src="@drawable/android"
+                            android:src="@drawable/web_d"
                             android:layout_height="50dp"/>
 
                         <LinearLayout
@@ -192,8 +195,9 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/txtResult.Course_2"
                                 android:layout_width="wrap_content"
-                                android:text="Android"
+                                android:text="CSE423"
                                 android:textStyle="bold"
                                 android:gravity="center"
                                 android:textSize="20dp"
@@ -210,6 +214,7 @@
                                 android:progressDrawable="@drawable/circularprogressbar2"
                                 android:secondaryProgress="100" />
                             <TextView
+                                android:id="@+id/txtResult.TGPA_2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="7.80 TGPA"
@@ -217,10 +222,10 @@
                                 android:textSize="15dp"
                                 android:textStyle="bold"/>
                             <Button
+                                android:id="@+id/btnResult_2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="30dp"
                                 android:ems="5"
-                                android:id="@+id/resultbut"
                                 android:text="View"
                                 android:backgroundTint="@color/teal_200"
                                 />
@@ -245,7 +250,7 @@
 
                         <ImageView
                             android:layout_width="50dp"
-                            android:src="@drawable/reactsj"
+                            android:src="@drawable/web_d"
                             android:layout_height="50dp"/>
 
                         <LinearLayout
@@ -255,8 +260,9 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/txtResult.Course_3"
                                 android:layout_width="wrap_content"
-                                android:text="React Js"
+                                android:text="CSE427"
                                 android:textStyle="bold"
                                 android:gravity="center"
                                 android:textSize="20dp"
@@ -274,6 +280,7 @@
                                 android:progressDrawable="@drawable/circularprogressbar2"
                                 android:secondaryProgress="100" />
                             <TextView
+                                android:id="@+id/txtResult.TGPA_3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="7.80 TGPA"
@@ -285,7 +292,7 @@
                                 android:layout_height="30dp"
                                 android:ems="5"
                                 android:text="View"
-                                android:id="@+id/timetablebut"
+                                android:id="@+id/btnResult_3"
                                 android:backgroundTint="@color/teal_200"
                                 />
 
@@ -319,8 +326,9 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/txtResult.Course_4"
                                 android:layout_width="wrap_content"
-                                android:text="Virtual machine"
+                                android:text="INT250"
                                 android:textStyle="bold"
                                 android:gravity="center"
                                 android:textSize="20dp"
@@ -338,6 +346,7 @@
                                 android:progressDrawable="@drawable/circularprogressbar2"
                                 android:secondaryProgress="100" />
                             <TextView
+                                android:id="@+id/txtResult.TGPA_4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="7.80 TGPA"
@@ -348,7 +357,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="30dp"
                                 android:ems="5"
-                                android:id="@+id/btnSyllabus"
+                                android:id="@+id/btnResult_4"
                                 android:text="View"
                                 android:backgroundTint="@color/teal_200"
                                 />
@@ -383,8 +392,9 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/txtResult.Course_5"
                                 android:layout_width="wrap_content"
-                                android:text="Virtual laboratory"
+                                android:text="PEA308"
                                 android:textStyle="bold"
                                 android:gravity="center"
                                 android:textSize="20dp"
@@ -402,6 +412,7 @@
                                 android:progressDrawable="@drawable/circularprogressbar2"
                                 android:secondaryProgress="100" />
                             <TextView
+                                android:id="@+id/txtResult.TGPA_5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="7.80 TGPA"
@@ -413,7 +424,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="30dp"
                                 android:ems="5"
-                                android:id="@+id/exambut"
+                                android:id="@+id/btnResult_5"
                                 android:text="View"
                                 android:backgroundTint="@color/teal_200"
                                 />

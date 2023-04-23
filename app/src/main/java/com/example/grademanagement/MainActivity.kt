@@ -49,6 +49,7 @@ class MainActivity : AppCompatActivity() {
                 firebaseAuth.signInWithEmailAndPassword(email.text.toString(), pass.text.toString())
                     .addOnCompleteListener {
                         if (it.isSuccessful) {
+                            editor.putString("Cred_ID",email.text.toString())
                             editor.putBoolean("Cred_Pref",true)
                             editor.commit()
                             val intent = Intent(this, Grademanagement::class.java)
