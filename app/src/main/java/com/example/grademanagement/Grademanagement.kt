@@ -22,6 +22,13 @@ class Grademanagement : AppCompatActivity() {
 
 
 
+        var btnSyllabus = findViewById<Button>(R.id.btnSyllabus)
+        btnSyllabus.setOnClickListener {
+            var intent= Intent(this, SyllabusActivity::class.java)
+            startActivity(intent)
+        }
+
+
 
         var dateselected = findViewById<ImageButton>(R.id.calenderbut)
         dateselected.setOnClickListener(){
