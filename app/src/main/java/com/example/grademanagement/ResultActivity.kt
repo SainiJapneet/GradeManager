@@ -56,19 +56,41 @@ class ResultActivity : AppCompatActivity() {
         imgResult.setImageResource(imgID)
 
         btnUpdate.setOnClickListener {
-            caPercent = (edtCA.text.toString().toFloat()/edtCA2.text.toString().toFloat())*100
-            mtePercent = (edtMTE.text.toString().toFloat()/edtMTE2.text.toString().toFloat())*100
-            etePercent = (edtETE.text.toString().toFloat()/edtETE2.text.toString().toFloat())*100
-            tgpa = (caPercent*0.3f + mtePercent*0.2f + etePercent*0.5f)/10
-            val result = hashMapOf(
-                "CA" to caPercent,
-                "MTE" to mtePercent,
-                "ETE" to etePercent,
-                "TGPA" to tgpa
-            )
-            db.collection("$UID").document("$code").set(result)
-                .addOnCompleteListener{ Toast.makeText(this,"Updated successfully",Toast.LENGTH_LONG).show() }
-                .addOnFailureListener { Toast.makeText(this,"Updation Failed",Toast.LENGTH_LONG).show() }
+            caPercent =
+                (edtCA.text.toString().toFloat() / edtCA2.text.toString().toFloat()) * 100
+            mtePercent =
+                (edtMTE.text.toString().toFloat() / edtMTE2.text.toString().toFloat()) * 100
+            etePercent =
+                (edtETE.text.toString().toFloat() / edtETE2.text.toString().toFloat()) * 100
+            tgpa = (caPercent * 0.3f + mtePercent * 0.2f + etePercent * 0.5f) / 10
+            
+            if(caPercent > 100 || mtePercent > 100 || etePercent > 100){
+                Toast.makeText(this,"Max marks can't be less than obtained marks",Toast.LENGTH_LONG).show()
+            }
+            else {
+                val result = hashMapOf(
+                    "CA" to caPercent,
+                    "MTE" to mtePercent,
+                    "ETE" to etePercent,
+                    "TGPA" to tgpa
+                )
+                db.collection("$UID").document("$code").set(result)
+                    .addOnCompleteListener {
+                        Toast.makeText(
+                            this,
+                            "Updated successfully",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }
+                    .addOnFailureListener {
+                        Toast.makeText(
+                            this,
+                            "Updation Failed",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }
+
+            }
         }
     }
 }

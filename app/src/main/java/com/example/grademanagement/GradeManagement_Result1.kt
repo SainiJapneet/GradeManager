@@ -176,4 +176,6 @@ class GradeManagement_Result1 : AppCompatActivity() {
         intent.putExtra("imgID",imgID)
         startActivity(intent)
     }
+
+
 }

@@ -151,7 +151,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="30dp"
                                 android:ems="5"
-                                android:text="View"
+                                android:text="edit"
                                 android:backgroundTint="@color/teal_200"
                                 />
 
@@ -226,7 +226,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="30dp"
                                 android:ems="5"
-                                android:text="View"
+                                android:text="Edit"
                                 android:backgroundTint="@color/teal_200"
                                 />
 
@@ -291,7 +291,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="30dp"
                                 android:ems="5"
-                                android:text="View"
+                                android:text="Edit"
                                 android:id="@+id/btnResult_3"
                                 android:backgroundTint="@color/teal_200"
                                 />
@@ -358,7 +358,7 @@
                                 android:layout_height="30dp"
                                 android:ems="5"
                                 android:id="@+id/btnResult_4"
-                                android:text="View"
+                                android:text="Edit"
                                 android:backgroundTint="@color/teal_200"
                                 />
 
@@ -425,7 +425,7 @@
                                 android:layout_height="30dp"
                                 android:ems="5"
                                 android:id="@+id/btnResult_5"
-                                android:text="View"
+                                android:text="Edit"
                                 android:backgroundTint="@color/teal_200"
                                 />
 
