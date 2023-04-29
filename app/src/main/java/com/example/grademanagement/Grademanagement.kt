@@ -3,6 +3,7 @@ package com.example.grademanagement
 
 import android.app.DatePickerDialog
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -15,10 +16,24 @@ import java.util.*
 
 class Grademanagement : AppCompatActivity() {
 
+    lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_grademanagement)
+
+        sharedPreferences = this.getSharedPreferences("Shared_Prefs", MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+
+
+
+        var btnLogOut = findViewById<Button>(R.id.btnLogOut)
+        btnLogOut.setOnClickListener {
+            editor.putBoolean("Cred_Pref",false)
+            editor.commit()
+            var intent= Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
 
 
 
